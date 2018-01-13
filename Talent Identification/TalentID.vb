@@ -74,6 +74,16 @@ Public Class TalentID
             activateexamp.Visible = True
         End If
 
+        If txtusergroup.Text = "CANDIDATE" Then
+            examp.Visible = True
+            setexamp.Visible = False
+            reportsp.Visible = False
+            adminp.Visible = False
+            scoutp.Visible = False
+            jobadminp.Visible = False
+            activateexamp.Visible = False
+        End If
+
 
         If txtusergroup.Text = "TEST SETTER" Then
             examp.Visible = False
