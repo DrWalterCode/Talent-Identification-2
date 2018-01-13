@@ -142,7 +142,7 @@ Public Class FrmAdmin
         Dispose()
     End Sub
 
-    Private Sub TileItem1_ItemClick_1(sender As Object, e As DevExpress.XtraEditors.TileItemEventArgs) Handles TileItem1.ItemClick
+    Private Sub TileItem1_ItemClick_1(sender As Object, e As DevExpress.XtraEditors.TileItemEventArgs) 
         MsgBox("development still in progress")
     End Sub
 End Class

@@ -49,7 +49,7 @@ Public Class activateExam
             Dim URL As String = "http://portal.zimtext.co.zw/index.php?app=ws&u=" & username & "&h=" & webservicesToken & " &op=pv&to=" & receipientMobileNumbers & "&msg=" & SMSMessage
             SmsStatusMsg = client.DownloadString(URL)
             If SmsStatusMsg.Contains(“""status"":""OK""”) Then
-                SmsStatusMsg = "Successfully Recovered Password"
+                SmsStatusMsg = "Successfully Notified Students"
             Else
                 If SmsStatusMsg.Contains(“""error"":""100""”) Then
                     SmsStatusMsg = "authentication failed"

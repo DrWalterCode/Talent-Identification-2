@@ -22,16 +22,14 @@ Partial Class writeExam
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(writeExam))
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.SimpleButton1 = New DevExpress.XtraEditors.SimpleButton()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.GaugeControl2 = New DevExpress.XtraGauges.Win.GaugeControl()
-        Me.circularGauge1 = New DevExpress.XtraGauges.Win.Gauges.Circular.CircularGauge()
         Me.LabelComponent1 = New DevExpress.XtraGauges.Win.Base.LabelComponent()
         Me.ArcScaleRangeBarComponent1 = New DevExpress.XtraGauges.Win.Gauges.Circular.ArcScaleRangeBarComponent()
         Me.ArcScaleComponent2 = New DevExpress.XtraGauges.Win.Gauges.Circular.ArcScaleComponent()
@@ -46,7 +44,6 @@ Partial Class writeExam
         Me.e3 = New DevExpress.XtraEditors.TextEdit()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.e2 = New System.Windows.Forms.TextBox()
-        Me.SimpleButton7 = New DevExpress.XtraEditors.SimpleButton()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.e6 = New DevExpress.XtraEditors.ComboBoxEdit()
         Me.e1 = New DevExpress.XtraEditors.TextEdit()
@@ -54,9 +51,12 @@ Partial Class writeExam
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
+        Me.SimpleButton7 = New DevExpress.XtraEditors.SimpleButton()
+        Me.circularGauge1 = New DevExpress.XtraGauges.Win.Gauges.Circular.CircularGauge()
+        Me.SimpleButton1 = New DevExpress.XtraEditors.SimpleButton()
+        Me.SimpleButton2 = New DevExpress.XtraEditors.SimpleButton()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
-        CType(Me.circularGauge1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LabelComponent1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ArcScaleRangeBarComponent1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ArcScaleComponent2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -67,26 +67,27 @@ Partial Class writeExam
         CType(Me.e6.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.e1.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
+        CType(Me.circularGauge1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'DataGridView1
         '
         Me.DataGridView1.AllowUserToAddRows = False
         Me.DataGridView1.AllowUserToDeleteRows = False
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.LightGray
-        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.DataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle7.BackColor = System.Drawing.Color.LightGray
+        DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText
+        Me.DataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle7
         Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells
         Me.DataGridView1.BackgroundColor = System.Drawing.Color.White
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.0!)
-        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.LightSteelBlue
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.0!)
+        DataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.LightSteelBlue
+        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle8
         Me.DataGridView1.Location = New System.Drawing.Point(33, 42)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
@@ -117,19 +118,6 @@ Partial Class writeExam
         Me.Label1.TabIndex = 323
         Me.Label1.Text = "WRITE EXAM"
         '
-        'SimpleButton1
-        '
-        Me.SimpleButton1.Appearance.BackColor = System.Drawing.Color.White
-        Me.SimpleButton1.Appearance.Options.UseBackColor = True
-        Me.SimpleButton1.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder
-        Me.SimpleButton1.Dock = System.Windows.Forms.DockStyle.Right
-        Me.SimpleButton1.ImageOptions.Image = CType(resources.GetObject("SimpleButton1.ImageOptions.Image"), System.Drawing.Image)
-        Me.SimpleButton1.Location = New System.Drawing.Point(1332, 0)
-        Me.SimpleButton1.Name = "SimpleButton1"
-        Me.SimpleButton1.Size = New System.Drawing.Size(38, 54)
-        Me.SimpleButton1.TabIndex = 309
-        Me.SimpleButton1.TabStop = False
-        '
         'Label2
         '
         Me.Label2.AutoSize = True
@@ -151,14 +139,6 @@ Partial Class writeExam
         Me.GaugeControl2.Name = "GaugeControl2"
         Me.GaugeControl2.Size = New System.Drawing.Size(164, 133)
         Me.GaugeControl2.TabIndex = 352
-        '
-        'circularGauge1
-        '
-        Me.circularGauge1.Bounds = New System.Drawing.Rectangle(6, 6, 152, 121)
-        Me.circularGauge1.Labels.AddRange(New DevExpress.XtraGauges.Win.Base.LabelComponent() {Me.LabelComponent1})
-        Me.circularGauge1.Name = "circularGauge1"
-        Me.circularGauge1.RangeBars.AddRange(New DevExpress.XtraGauges.Win.Gauges.Circular.ArcScaleRangeBarComponent() {Me.ArcScaleRangeBarComponent1})
-        Me.circularGauge1.Scales.AddRange(New DevExpress.XtraGauges.Win.Gauges.Circular.ArcScaleComponent() {Me.ArcScaleComponent2})
         '
         'LabelComponent1
         '
@@ -214,14 +194,14 @@ Partial Class writeExam
         'e0
         '
         Me.e0.Enabled = False
-        Me.e0.Location = New System.Drawing.Point(960, 39)
+        Me.e0.Location = New System.Drawing.Point(874, 39)
         Me.e0.Name = "e0"
         Me.e0.Properties.Appearance.BackColor = System.Drawing.Color.LightGray
         Me.e0.Properties.Appearance.Options.UseBackColor = True
         Me.e0.Properties.Mask.BeepOnError = True
         Me.e0.Properties.Mask.EditMask = "\p{Lu}\p{Ll}*(\s+\p{Lu}\p{Ll}*)* "
         Me.e0.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx
-        Me.e0.Size = New System.Drawing.Size(61, 20)
+        Me.e0.Size = New System.Drawing.Size(185, 20)
         Me.e0.TabIndex = 368
         '
         'Label6
@@ -230,9 +210,9 @@ Partial Class writeExam
         Me.Label6.Enabled = False
         Me.Label6.Location = New System.Drawing.Point(957, 23)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(63, 13)
+        Me.Label6.Size = New System.Drawing.Size(47, 13)
         Me.Label6.TabIndex = 369
-        Me.Label6.Text = "Question ID"
+        Me.Label6.Text = "Exam ID"
         '
         'Label5
         '
@@ -318,19 +298,6 @@ Partial Class writeExam
         Me.e2.Size = New System.Drawing.Size(279, 59)
         Me.e2.TabIndex = 360
         '
-        'SimpleButton7
-        '
-        Me.SimpleButton7.Appearance.BackColor = System.Drawing.Color.White
-        Me.SimpleButton7.Appearance.Options.UseBackColor = True
-        Me.SimpleButton7.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder
-        Me.SimpleButton7.ImageOptions.Image = CType(resources.GetObject("SimpleButton7.ImageOptions.Image"), System.Drawing.Image)
-        Me.SimpleButton7.Location = New System.Drawing.Point(973, 234)
-        Me.SimpleButton7.Name = "SimpleButton7"
-        Me.SimpleButton7.Size = New System.Drawing.Size(86, 29)
-        Me.SimpleButton7.TabIndex = 358
-        Me.SimpleButton7.TabStop = False
-        Me.SimpleButton7.Text = "&SAVE"
-        '
         'Label15
         '
         Me.Label15.AutoSize = True
@@ -361,7 +328,7 @@ Partial Class writeExam
         Me.e1.Properties.Appearance.BackColor = System.Drawing.Color.LightGray
         Me.e1.Properties.Appearance.Options.UseBackColor = True
         Me.e1.Properties.Mask.BeepOnError = True
-        Me.e1.Size = New System.Drawing.Size(165, 20)
+        Me.e1.Size = New System.Drawing.Size(61, 20)
         Me.e1.TabIndex = 371
         '
         'Label17
@@ -370,12 +337,13 @@ Partial Class writeExam
         Me.Label17.Enabled = False
         Me.Label17.Location = New System.Drawing.Point(777, 23)
         Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(47, 13)
+        Me.Label17.Size = New System.Drawing.Size(81, 13)
         Me.Label17.TabIndex = 372
-        Me.Label17.Text = "Exam ID"
+        Me.Label17.Text = "Exam Taken ID"
         '
         'Panel1
         '
+        Me.Panel1.Controls.Add(Me.SimpleButton2)
         Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Controls.Add(Me.e1)
         Me.Panel1.Controls.Add(Me.DataGridView1)
@@ -404,6 +372,53 @@ Partial Class writeExam
         'Timer2
         '
         '
+        'SimpleButton7
+        '
+        Me.SimpleButton7.Appearance.BackColor = System.Drawing.Color.White
+        Me.SimpleButton7.Appearance.Options.UseBackColor = True
+        Me.SimpleButton7.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder
+        Me.SimpleButton7.ImageOptions.Image = CType(resources.GetObject("SimpleButton7.ImageOptions.Image"), System.Drawing.Image)
+        Me.SimpleButton7.Location = New System.Drawing.Point(973, 234)
+        Me.SimpleButton7.Name = "SimpleButton7"
+        Me.SimpleButton7.Size = New System.Drawing.Size(86, 29)
+        Me.SimpleButton7.TabIndex = 358
+        Me.SimpleButton7.TabStop = False
+        Me.SimpleButton7.Text = "&SUBMIT"
+        '
+        'circularGauge1
+        '
+        Me.circularGauge1.Bounds = New System.Drawing.Rectangle(6, 6, 152, 121)
+        Me.circularGauge1.Labels.AddRange(New DevExpress.XtraGauges.Win.Base.LabelComponent() {Me.LabelComponent1})
+        Me.circularGauge1.Name = "circularGauge1"
+        Me.circularGauge1.RangeBars.AddRange(New DevExpress.XtraGauges.Win.Gauges.Circular.ArcScaleRangeBarComponent() {Me.ArcScaleRangeBarComponent1})
+        Me.circularGauge1.Scales.AddRange(New DevExpress.XtraGauges.Win.Gauges.Circular.ArcScaleComponent() {Me.ArcScaleComponent2})
+        '
+        'SimpleButton1
+        '
+        Me.SimpleButton1.Appearance.BackColor = System.Drawing.Color.White
+        Me.SimpleButton1.Appearance.Options.UseBackColor = True
+        Me.SimpleButton1.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder
+        Me.SimpleButton1.Dock = System.Windows.Forms.DockStyle.Right
+        Me.SimpleButton1.ImageOptions.Image = CType(resources.GetObject("SimpleButton1.ImageOptions.Image"), System.Drawing.Image)
+        Me.SimpleButton1.Location = New System.Drawing.Point(1332, 0)
+        Me.SimpleButton1.Name = "SimpleButton1"
+        Me.SimpleButton1.Size = New System.Drawing.Size(38, 54)
+        Me.SimpleButton1.TabIndex = 309
+        Me.SimpleButton1.TabStop = False
+        '
+        'SimpleButton2
+        '
+        Me.SimpleButton2.Appearance.BackColor = System.Drawing.Color.White
+        Me.SimpleButton2.Appearance.Options.UseBackColor = True
+        Me.SimpleButton2.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder
+        Me.SimpleButton2.ImageOptions.Image = CType(resources.GetObject("SimpleButton2.ImageOptions.Image"), System.Drawing.Image)
+        Me.SimpleButton2.Location = New System.Drawing.Point(853, 306)
+        Me.SimpleButton2.Name = "SimpleButton2"
+        Me.SimpleButton2.Size = New System.Drawing.Size(206, 29)
+        Me.SimpleButton2.TabIndex = 373
+        Me.SimpleButton2.TabStop = False
+        Me.SimpleButton2.Text = "&MARK MY EXAM SUBMISSION"
+        '
         'writeExam
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -423,7 +438,6 @@ Partial Class writeExam
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
-        CType(Me.circularGauge1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LabelComponent1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ArcScaleRangeBarComponent1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ArcScaleComponent2, System.ComponentModel.ISupportInitialize).EndInit()
@@ -435,6 +449,7 @@ Partial Class writeExam
         CType(Me.e1.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.circularGauge1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -468,4 +483,5 @@ Partial Class writeExam
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Timer1 As Timer
     Friend WithEvents Timer2 As Timer
+    Friend WithEvents SimpleButton2 As DevExpress.XtraEditors.SimpleButton
 End Class

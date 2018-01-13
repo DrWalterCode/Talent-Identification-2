@@ -65,12 +65,35 @@ Public Class TalentID
 
 
         If txtusergroup.Text = "ADMIN" Then
-
+            examp.Visible = True
+            setexamp.Visible = True
+            reportsp.Visible = True
+            adminp.Visible = True
+            scoutp.Visible = True
+            jobadminp.Visible = True
+            activateexamp.Visible = True
         End If
 
 
-        If txtusergroup.Text = "CLIENT" Then
+        If txtusergroup.Text = "TEST SETTER" Then
+            examp.Visible = False
+            setexamp.Visible = True
+            reportsp.Visible = True
+            adminp.Visible = False
+            scoutp.Visible = False
+            jobadminp.Visible = False
+            activateexamp.Visible = True
+        End If
 
+
+        If txtusergroup.Text = "SCOUT" Then
+            examp.Visible = False
+            setexamp.Visible = False
+            reportsp.Visible = True
+            adminp.Visible = False
+            scoutp.Visible = True
+            jobadminp.Visible = True
+            activateexamp.Visible = False
         End If
 
     End Sub
@@ -93,19 +116,19 @@ Public Class TalentID
 
     End Sub
 
-    Private Sub TileItem4_ItemClick(sender As Object, e As DevExpress.XtraEditors.TileItemEventArgs) Handles TileItem4.ItemClick
+    Private Sub TileItem4_ItemClick(sender As Object, e As DevExpress.XtraEditors.TileItemEventArgs) Handles adminp.ItemClick
         FrmAdmin.ShowDialog()
     End Sub
 
-    Private Sub TileItem2_ItemClick(sender As Object, e As DevExpress.XtraEditors.TileItemEventArgs) Handles TileItem2.ItemClick
+    Private Sub TileItem2_ItemClick(sender As Object, e As DevExpress.XtraEditors.TileItemEventArgs) Handles setexamp.ItemClick
         setExam.ShowDialog()
     End Sub
 
-    Private Sub TileItem7_ItemClick(sender As Object, e As DevExpress.XtraEditors.TileItemEventArgs) Handles TileItem7.ItemClick
+    Private Sub TileItem7_ItemClick(sender As Object, e As DevExpress.XtraEditors.TileItemEventArgs) Handles activateexamp.ItemClick
         activateExam.ShowDialog()
     End Sub
 
-    Private Sub TileItem1_ItemClick(sender As Object, e As DevExpress.XtraEditors.TileItemEventArgs) Handles TileItem1.ItemClick
+    Private Sub TileItem1_ItemClick(sender As Object, e As DevExpress.XtraEditors.TileItemEventArgs) Handles examp.ItemClick
         Dim examdate As String
         Dim SQL As String = "SELECT distinct(exam_date),time_limit FROM exams where industry ='" + FrmLogin.industry + "' and active='ACTIVE'"
         Using _cmd = New MySqlCommand(SQL, _con)
@@ -141,9 +164,18 @@ Public Class TalentID
         End Using
     End Sub
 
-    Private Sub TileItem5_ItemClick(sender As Object, e As DevExpress.XtraEditors.TileItemEventArgs) Handles TileItem5.ItemClick
+    Private Sub TileItem5_ItemClick(sender As Object, e As DevExpress.XtraEditors.TileItemEventArgs) Handles scoutp.ItemClick
         searchTalent.ShowDialog()
     End Sub
+
+    Private Sub reportsp_ItemClick(sender As Object, e As DevExpress.XtraEditors.TileItemEventArgs) Handles reportsp.ItemClick
+        frmReports.ShowDialog()
+    End Sub
+
+    Private Sub jobadminp_ItemClick(sender As Object, e As DevExpress.XtraEditors.TileItemEventArgs) Handles jobadminp.ItemClick
+        MsgBox("Under Development")
+    End Sub
+
     ''' <summary>
     ''' 
     ''' </summary>

@@ -27,13 +27,14 @@ Partial Class FrmAdmin
         Dim TileItemElement1 As DevExpress.XtraEditors.TileItemElement = New DevExpress.XtraEditors.TileItemElement()
         Dim TileItemElement2 As DevExpress.XtraEditors.TileItemElement = New DevExpress.XtraEditors.TileItemElement()
         Dim TileItemElement3 As DevExpress.XtraEditors.TileItemElement = New DevExpress.XtraEditors.TileItemElement()
-        Dim TileItemElement4 As DevExpress.XtraEditors.TileItemElement = New DevExpress.XtraEditors.TileItemElement()
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.TabPane2 = New DevExpress.XtraBars.Navigation.TabPane()
         Me.TabNavigationPage2 = New DevExpress.XtraBars.Navigation.TabNavigationPage()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.TextEdit1 = New DevExpress.XtraEditors.ComboBoxEdit()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.txtgroup = New DevExpress.XtraEditors.ComboBoxEdit()
         Me.Label28 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
@@ -61,20 +62,18 @@ Partial Class FrmAdmin
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextEdit1 = New DevExpress.XtraEditors.ComboBoxEdit()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.SimpleButton1 = New DevExpress.XtraEditors.SimpleButton()
         Me.SimpleButton6 = New DevExpress.XtraEditors.SimpleButton()
         Me.SimpleButton7 = New DevExpress.XtraEditors.SimpleButton()
         Me.TileItem3 = New DevExpress.XtraEditors.TileItem()
         Me.TileItem2 = New DevExpress.XtraEditors.TileItem()
         Me.TileItem6 = New DevExpress.XtraEditors.TileItem()
-        Me.TileItem1 = New DevExpress.XtraEditors.TileItem()
         Me.TabPage3.SuspendLayout()
         CType(Me.TabPane2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPane2.SuspendLayout()
         Me.TabNavigationPage2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
+        CType(Me.TextEdit1.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtgroup.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtforename.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtsurname.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -86,7 +85,6 @@ Partial Class FrmAdmin
         Me.TabControl1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
-        CType(Me.TextEdit1.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel5
@@ -168,6 +166,28 @@ Partial Class FrmAdmin
         Me.GroupBox3.TabIndex = 2
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Username Details"
+        '
+        'TextEdit1
+        '
+        Me.TextEdit1.Location = New System.Drawing.Point(117, 37)
+        Me.TextEdit1.Name = "TextEdit1"
+        Me.TextEdit1.Properties.Appearance.BackColor = System.Drawing.Color.LightGray
+        Me.TextEdit1.Properties.Appearance.Options.UseBackColor = True
+        Me.TextEdit1.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.TextEdit1.Properties.Items.AddRange(New Object() {"BUSINESS", "GOVERNMENT", "HEALTH"})
+        Me.TextEdit1.Properties.Sorted = True
+        Me.TextEdit1.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor
+        Me.TextEdit1.Size = New System.Drawing.Size(222, 20)
+        Me.TextEdit1.TabIndex = 330
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(8, 40)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(44, 13)
+        Me.Label3.TabIndex = 329
+        Me.Label3.Text = "Industry"
         '
         'txtgroup
         '
@@ -415,7 +435,6 @@ Partial Class FrmAdmin
         Me.TileGroup2.Items.Add(Me.TileItem3)
         Me.TileGroup2.Items.Add(Me.TileItem2)
         Me.TileGroup2.Items.Add(Me.TileItem6)
-        Me.TileGroup2.Items.Add(Me.TileItem1)
         Me.TileGroup2.Name = "TileGroup2"
         '
         'TileControl1
@@ -470,28 +489,6 @@ Partial Class FrmAdmin
         Me.Label1.Size = New System.Drawing.Size(326, 26)
         Me.Label1.TabIndex = 323
         Me.Label1.Text = "SYSTEM ADMINISTRATION"
-        '
-        'TextEdit1
-        '
-        Me.TextEdit1.Location = New System.Drawing.Point(117, 37)
-        Me.TextEdit1.Name = "TextEdit1"
-        Me.TextEdit1.Properties.Appearance.BackColor = System.Drawing.Color.LightGray
-        Me.TextEdit1.Properties.Appearance.Options.UseBackColor = True
-        Me.TextEdit1.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.TextEdit1.Properties.Items.AddRange(New Object() {"BUSINESS", "GOVERNMENT", "HEALTH"})
-        Me.TextEdit1.Properties.Sorted = True
-        Me.TextEdit1.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor
-        Me.TextEdit1.Size = New System.Drawing.Size(222, 20)
-        Me.TextEdit1.TabIndex = 330
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(8, 40)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(44, 13)
-        Me.Label3.TabIndex = 329
-        Me.Label3.Text = "Industry"
         '
         'SimpleButton1
         '
@@ -565,16 +562,6 @@ Partial Class FrmAdmin
         Me.TileItem6.ItemSize = DevExpress.XtraEditors.TileItemSize.Medium
         Me.TileItem6.Name = "TileItem6"
         '
-        'TileItem1
-        '
-        TileItemElement4.Image = CType(resources.GetObject("TileItemElement4.Image"), System.Drawing.Image)
-        TileItemElement4.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter
-        TileItemElement4.Text = "MONITOR EXAMS"
-        Me.TileItem1.Elements.Add(TileItemElement4)
-        Me.TileItem1.Id = 10
-        Me.TileItem1.ItemSize = DevExpress.XtraEditors.TileItemSize.Wide
-        Me.TileItem1.Name = "TileItem1"
-        '
         'FrmAdmin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -597,6 +584,7 @@ Partial Class FrmAdmin
         Me.TabNavigationPage2.ResumeLayout(False)
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
+        CType(Me.TextEdit1.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtgroup.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtforename.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtsurname.Properties, System.ComponentModel.ISupportInitialize).EndInit()
@@ -609,7 +597,6 @@ Partial Class FrmAdmin
         Me.Panel1.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
-        CType(Me.TextEdit1.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -652,7 +639,6 @@ Partial Class FrmAdmin
     Friend WithEvents Panel2 As Panel
     Friend WithEvents SimpleButton1 As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents Label1 As Label
-    Friend WithEvents TileItem1 As DevExpress.XtraEditors.TileItem
     Friend WithEvents TextEdit1 As DevExpress.XtraEditors.ComboBoxEdit
     Private WithEvents Label3 As Label
 End Class

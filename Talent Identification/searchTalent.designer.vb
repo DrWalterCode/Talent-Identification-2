@@ -22,35 +22,33 @@ Partial Class searchTalent
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(searchTalent))
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.TextEdit1 = New DevExpress.XtraEditors.ComboBoxEdit()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.txtgroup = New DevExpress.XtraEditors.ComboBoxEdit()
+        Me.txtindus = New DevExpress.XtraEditors.ComboBoxEdit()
         Me.Label28 = New System.Windows.Forms.Label()
         Me.SimpleButton7 = New DevExpress.XtraEditors.SimpleButton()
+        Me.txtnum = New DevExpress.XtraEditors.TextEdit()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.SimpleButton1 = New DevExpress.XtraEditors.SimpleButton()
         Me.SimpleButton2 = New DevExpress.XtraEditors.SimpleButton()
-        Me.SimpleButton3 = New DevExpress.XtraEditors.SimpleButton()
-        Me.SimpleButton4 = New DevExpress.XtraEditors.SimpleButton()
         Me.GroupBox3.SuspendLayout()
-        CType(Me.TextEdit1.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtgroup.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtindus.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtnum.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox3
         '
-        Me.GroupBox3.Controls.Add(Me.TextEdit1)
         Me.GroupBox3.Controls.Add(Me.Label3)
-        Me.GroupBox3.Controls.Add(Me.txtgroup)
+        Me.GroupBox3.Controls.Add(Me.txtindus)
         Me.GroupBox3.Controls.Add(Me.Label28)
         Me.GroupBox3.Controls.Add(Me.SimpleButton7)
+        Me.GroupBox3.Controls.Add(Me.txtnum)
         Me.GroupBox3.Location = New System.Drawing.Point(15, 71)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(861, 63)
@@ -58,40 +56,27 @@ Partial Class searchTalent
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Search Criteria"
         '
-        'TextEdit1
-        '
-        Me.TextEdit1.Location = New System.Drawing.Point(481, 16)
-        Me.TextEdit1.Name = "TextEdit1"
-        Me.TextEdit1.Properties.Appearance.BackColor = System.Drawing.Color.LightGray
-        Me.TextEdit1.Properties.Appearance.Options.UseBackColor = True
-        Me.TextEdit1.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.TextEdit1.Properties.Items.AddRange(New Object() {"BUSINESS", "GOVERNMENT", "HEALTH"})
-        Me.TextEdit1.Properties.Sorted = True
-        Me.TextEdit1.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor
-        Me.TextEdit1.Size = New System.Drawing.Size(222, 20)
-        Me.TextEdit1.TabIndex = 330
-        '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Location = New System.Drawing.Point(395, 19)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(78, 13)
+        Me.Label3.Size = New System.Drawing.Size(64, 13)
         Me.Label3.TabIndex = 329
-        Me.Label3.Text = "Average Score"
+        Me.Label3.Text = "Exam Score"
         '
-        'txtgroup
+        'txtindus
         '
-        Me.txtgroup.Location = New System.Drawing.Point(117, 12)
-        Me.txtgroup.Name = "txtgroup"
-        Me.txtgroup.Properties.Appearance.BackColor = System.Drawing.Color.LightGray
-        Me.txtgroup.Properties.Appearance.Options.UseBackColor = True
-        Me.txtgroup.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.txtgroup.Properties.Items.AddRange(New Object() {"ADMIN", "NON ALIGNED", "SCOUT", "TEST SETTER"})
-        Me.txtgroup.Properties.Sorted = True
-        Me.txtgroup.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor
-        Me.txtgroup.Size = New System.Drawing.Size(222, 20)
-        Me.txtgroup.TabIndex = 144
+        Me.txtindus.Location = New System.Drawing.Point(117, 12)
+        Me.txtindus.Name = "txtindus"
+        Me.txtindus.Properties.Appearance.BackColor = System.Drawing.Color.LightGray
+        Me.txtindus.Properties.Appearance.Options.UseBackColor = True
+        Me.txtindus.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.txtindus.Properties.Items.AddRange(New Object() {"BUSINESS", "GOVERNMENT", "HEALTH", "NON ALIGNED"})
+        Me.txtindus.Properties.Sorted = True
+        Me.txtindus.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor
+        Me.txtindus.Size = New System.Drawing.Size(222, 20)
+        Me.txtindus.TabIndex = 144
         '
         'Label28
         '
@@ -115,24 +100,35 @@ Partial Class searchTalent
         Me.SimpleButton7.TabStop = False
         Me.SimpleButton7.Text = "&SEARCH"
         '
+        'txtnum
+        '
+        Me.txtnum.Location = New System.Drawing.Point(481, 16)
+        Me.txtnum.Name = "txtnum"
+        Me.txtnum.Properties.Appearance.BackColor = System.Drawing.Color.LightGray
+        Me.txtnum.Properties.Appearance.Options.UseBackColor = True
+        Me.txtnum.Properties.Mask.EditMask = "n0"
+        Me.txtnum.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric
+        Me.txtnum.Size = New System.Drawing.Size(222, 20)
+        Me.txtnum.TabIndex = 330
+        '
         'DataGridView1
         '
         Me.DataGridView1.AllowUserToAddRows = False
         Me.DataGridView1.AllowUserToDeleteRows = False
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.LightGray
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.DataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.LightGray
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
+        Me.DataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle3
         Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells
         Me.DataGridView1.BackgroundColor = System.Drawing.Color.White
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.0!)
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LightSteelBlue
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.0!)
+        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.LightSteelBlue
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle4
         Me.DataGridView1.Location = New System.Drawing.Point(15, 140)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
@@ -189,40 +185,12 @@ Partial Class searchTalent
         Me.SimpleButton2.TabStop = False
         Me.SimpleButton2.Text = "&INVITE FOR JOB INTERVIEW"
         '
-        'SimpleButton3
-        '
-        Me.SimpleButton3.Appearance.BackColor = System.Drawing.Color.White
-        Me.SimpleButton3.Appearance.Options.UseBackColor = True
-        Me.SimpleButton3.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder
-        Me.SimpleButton3.ImageOptions.Image = CType(resources.GetObject("SimpleButton3.ImageOptions.Image"), System.Drawing.Image)
-        Me.SimpleButton3.Location = New System.Drawing.Point(909, 208)
-        Me.SimpleButton3.Name = "SimpleButton3"
-        Me.SimpleButton3.Size = New System.Drawing.Size(190, 29)
-        Me.SimpleButton3.TabIndex = 320
-        Me.SimpleButton3.TabStop = False
-        Me.SimpleButton3.Text = "&VIEW TESTS REPORT"
-        '
-        'SimpleButton4
-        '
-        Me.SimpleButton4.Appearance.BackColor = System.Drawing.Color.White
-        Me.SimpleButton4.Appearance.Options.UseBackColor = True
-        Me.SimpleButton4.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder
-        Me.SimpleButton4.ImageOptions.Image = CType(resources.GetObject("SimpleButton4.ImageOptions.Image"), System.Drawing.Image)
-        Me.SimpleButton4.Location = New System.Drawing.Point(909, 256)
-        Me.SimpleButton4.Name = "SimpleButton4"
-        Me.SimpleButton4.Size = New System.Drawing.Size(223, 29)
-        Me.SimpleButton4.TabIndex = 321
-        Me.SimpleButton4.TabStop = False
-        Me.SimpleButton4.Text = "&VIEW CANDIDATE INFORMATION"
-        '
         'searchTalent
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1370, 526)
-        Me.Controls.Add(Me.SimpleButton4)
-        Me.Controls.Add(Me.SimpleButton3)
         Me.Controls.Add(Me.SimpleButton2)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.GroupBox3)
@@ -235,8 +203,8 @@ Partial Class searchTalent
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
-        CType(Me.TextEdit1.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtgroup.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtindus.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtnum.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
@@ -247,13 +215,11 @@ Partial Class searchTalent
     Friend WithEvents SimpleButton7 As DevExpress.XtraEditors.SimpleButton
     Private WithEvents DataGridView1 As DataGridView
     Private WithEvents Label28 As Label
-    Friend WithEvents txtgroup As DevExpress.XtraEditors.ComboBoxEdit
+    Friend WithEvents txtindus As DevExpress.XtraEditors.ComboBoxEdit
     Friend WithEvents Panel2 As Panel
     Friend WithEvents SimpleButton1 As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents Label1 As Label
-    Friend WithEvents TextEdit1 As DevExpress.XtraEditors.ComboBoxEdit
     Private WithEvents Label3 As Label
     Friend WithEvents SimpleButton2 As DevExpress.XtraEditors.SimpleButton
-    Friend WithEvents SimpleButton3 As DevExpress.XtraEditors.SimpleButton
-    Friend WithEvents SimpleButton4 As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents txtnum As DevExpress.XtraEditors.TextEdit
 End Class
