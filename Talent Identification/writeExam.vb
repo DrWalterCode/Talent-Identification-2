@@ -148,6 +148,9 @@ Public Class writeExam
             Timer2.Enabled = False
             Label2.Text = "EXAM TIME OUT"
             UpdateStats()
+            Timer1.Stop()
+            markexam()
+
         Else 'If timercount is higher then 0 then subtract one from it
             _timercount -= 1
             UpdateStats()
@@ -182,9 +185,26 @@ Public Class writeExam
 
     Private Sub SimpleButton2_Click_1(sender As Object, e As EventArgs) Handles SimpleButton2.Click
 
+        markexam()
 
+    End Sub
 
+    Private Sub markexam()
         Try
+            Try
+                _con.Close()
+                _con.Open()
+                _cmd = New MySqlCommand("update users set WroteExam='YES' where industry='" + FrmLogin.industry + "' and username='" & FrmLogin.lblUsername & "' ", _con)
+                _cmd.ExecuteReader(CommandBehavior.CloseConnection)
+                _cmd.Dispose()
+                _con.Close()
+            Catch ex As Exception
+                _cmd.Dispose()
+                _con.Close()
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End Try
+
+
             _con.Close()
             _con.Open()
             _cmd = New MySqlCommand("Select count(*) As examquestions,sum(answer = myanswer) As correct,sum(answer!= myanswer) As wrong,(sum(answer = myanswer)/count(*))*100 as percentage From results where username='" & FrmLogin.lblUsername.ToUpper & "' and examID='" & examID & "'  ", _con)
@@ -247,9 +267,8 @@ Public Class writeExam
 
         End Try
 
-
-
     End Sub
+
     Public Function getListOfIndustryNumbers() As List(Of String)
         Dim SQL As String = "SELECT phone FROM users where username ='" + FrmLogin.lblUsername.ToUpper + "'"
         Using _cmd = New MySqlCommand(SQL, _con)

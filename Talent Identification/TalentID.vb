@@ -139,6 +139,26 @@ Public Class TalentID
     End Sub
 
     Private Sub TileItem1_ItemClick(sender As Object, e As DevExpress.XtraEditors.TileItemEventArgs) Handles examp.ItemClick
+        Dim wroteexam As String
+        Dim SQL2 As String = "SELECT wroteexam FROM users where username ='" + FrmLogin.lblUsername + "'"
+        Using _cmd = New MySqlCommand(SQL2, _con)
+            _con.Close()
+            _con.Open()
+            Try
+                Dim dr = _cmd.ExecuteReader()
+                If dr.HasRows() Then
+                    dr.Read()
+                    wroteexam = dr("wroteexam").ToString()
+                Else
+                End If
+            Catch ex As MySqlException
+                ' Do some logging or something. 
+                MessageBox.Show("There was an error accessing your exam centre. DETAIL: " & ex.ToString())
+            End Try
+        End Using
+
+
+
         Dim examdate As String
         Dim SQL As String = "SELECT distinct(exam_date),time_limit FROM exams where industry ='" + FrmLogin.industry + "' and active='ACTIVE'"
         Using _cmd = New MySqlCommand(SQL, _con)
@@ -146,7 +166,8 @@ Public Class TalentID
             _con.Open()
             Try
                 Dim dr = _cmd.ExecuteReader()
-                While dr.Read()
+                If dr.HasRows() Then
+                    dr.Read()
                     examdate = dr("exam_date").ToString()
                     time_limit = dr("time_limit").ToString()
 
@@ -161,12 +182,16 @@ Public Class TalentID
                     ElseIf result = 0 Then
                         MsgBox("This exam expires today")
                         Exit Sub
+                    ElseIf wroteexam = "YES" Then
+                        MsgBox("You have already taken this exam")
+                        Exit Sub
                     Else
                         MsgBox("You have a new exam expiring on " + date1.ToString("dd MMMM yyyy") + " at " + date1.ToString("hh.mm.ss"))
                         writeExam.ShowDialog()
                     End If
-
-                End While
+                Else
+                    MsgBox("You have no new exams")
+                End If
             Catch ex As MySqlException
                 ' Do some logging or something. 
                 MessageBox.Show("There was an error accessing your exam centre. DETAIL: " & ex.ToString())

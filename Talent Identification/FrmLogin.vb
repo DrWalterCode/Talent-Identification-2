@@ -123,7 +123,7 @@ Public Class FrmLogin
             _con.Open()
             _cmd =
                 New MySqlCommand(
-                    "Select * from users where BINARY username like '%" + txtusername.Text + "%' and BINARY Password = '" + txtpwd.Text + "'",
+                    "Select * from users where BINARY username = '" + txtusername.Text + "' and Password = '" + txtpwd.Text + "'",
                     _con)
             Dim reader = _cmd.ExecuteReader()
             If reader.Read() = True Then

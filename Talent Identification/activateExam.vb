@@ -105,6 +105,18 @@ Public Class activateExam
 
             Try
                 _con.Open()
+                _cmd = New MySqlCommand("update users set WroteExam='NO' where industry='" + FrmLogin.industry + "' ", _con)
+                _cmd.ExecuteReader(CommandBehavior.CloseConnection)
+                _cmd.Dispose()
+                _con.Close()
+            Catch ex As Exception
+                _cmd.Dispose()
+                _con.Close()
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End Try
+
+            Try
+                _con.Open()
                 _cmd = New MySqlCommand("update exams set active='ACTIVE', exam_date='" + e3.Text + "',time_limit='" + e2.Text + "' where examID='" + e1.Text + "' ", _con)
                 _cmd.ExecuteReader(CommandBehavior.CloseConnection)
                 _cmd.Dispose()
@@ -139,6 +151,10 @@ Public Class activateExam
                 _con.Close()
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End Try
+
+
+
+
         End If
 
 
